@@ -38,7 +38,7 @@ type HTTPCommandExecutor struct {
 
 func NewHTTPCommandExecutor() *HTTPCommandExecutor {
 	return &HTTPCommandExecutor{
-		baseURL: "http://localhost:8083",
+		baseURL: "http://localhost:7380",
 		httpClient: &http.Client{
 			Timeout: time.Second * 100,
 		},

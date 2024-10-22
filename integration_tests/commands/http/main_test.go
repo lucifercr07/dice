@@ -16,7 +16,7 @@ func TestMain(m *testing.M) {
 	// checks for available port and then forks a goroutine
 	// to start the server
 	opts := TestServerOptions{
-		Port: 8083,
+		Port: 7380,
 	}
 	ctx, cancel := context.WithCancel(context.Background())
 	RunHTTPServer(ctx, &wg, opts)

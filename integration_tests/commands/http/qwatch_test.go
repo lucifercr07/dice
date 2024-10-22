@@ -74,7 +74,7 @@ func TestQwatchWithSSE(t *testing.T) {
 	go func() {
 		defer wg.Done()
 
-		resp, err := http.Post("http://localhost:8083/q.watch", "application/json",
+		resp, err := http.Post("http://localhost:7380/q.watch", "application/json",
 			bytes.NewBuffer([]byte(`{
 				"query": "SELECT $key, $value WHERE $key like 'match:100:*' and $value > 10 ORDER BY $value desc LIMIT 3"
 			}`)))
